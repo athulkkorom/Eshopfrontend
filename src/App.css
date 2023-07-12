@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+header{
+  background-color: #404040;
+  padding: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold ;
+  font-size: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.site-container{
   min-height: 100vh;
+}
+main{
+  flex: 1;
+}
+.products{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.product{
+  border: 1px #404040 solid;
+  margin: 1rem;
+}
+.product img{
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+}
+.product-info{
+  padding: 1rem;
+}
+.product-name{
+text-decoration: solid;
+color: rgb(145, 62, 62);
+}
+.img-large{
+  padding-top: 20px;
+  max-width: 100%;
+  height: 600px;
+}
+.details{
+  padding-top: 20px;
+}
+.name{
+  font-size: 30px;
+}
+.d-grid{
+  padding-top: 10px;
+}
+.card{
+  padding-top: 20px;
+}
+.small-containe{
+  max-width: 600px;
+}
+.p-2{
+  font-size: 20px;
+  color: rgb(16, 186, 172);
+}
+.cartimage{
+  width: 500px;
+  height: 500px;
+  padding-top: 30px;
+}
+.adress{
+  width: 500px;
+  height: 100px;
+}
+footer{
+  background-color: black;
+}
+.text-center{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.reviews{
+  width: 200px;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.motion{
+  color: rgb(16, 186, 172);
+}
+.orderImage{
+  height: 400px;
+  width: 400px;
+}
+.order{
+  padding-top: 20px;
 }
