@@ -9,7 +9,7 @@ const MyOrder = () => {
     const fetchData = async () => {
         try {
          
-          const response = await axios.get(`http://localhost:5000/myorder/email/${user.user.email}`);
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/myorder/email/${user.user.email}`);
           console.log(response.data); // Log the response data to inspect its structure
           setOrder(response.data);
         } catch (error) {

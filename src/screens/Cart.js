@@ -31,7 +31,7 @@ const Cart = () => {
   const removeCart = async (productId) => {
     const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
-    const res = await axios.put('http://localhost:5000/cart/remove', {
+    const res = await axios.put(`${process.env.REACT_APP_BACKEND_API}/cart/remove`, {
       email: user.user.email,
       productId
     });

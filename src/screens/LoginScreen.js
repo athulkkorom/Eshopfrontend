@@ -15,7 +15,7 @@ const LoginScreen = () => {
     }
   })
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit =(data)=>{axios.post(`http://localhost:5000/login`, data)
+  const onSubmit =(data)=>{axios.post(`${process.env.REACT_APP_BACKEND_API}/login`, data)
   .then(response => {
     console.log(response.data.user._id);
     console.log('success')

@@ -14,7 +14,7 @@ const AdminLogin = () => {
           })
   const navigate = useNavigate();
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit =(data)=>{axios.post(`http://localhost:5000/adminlogin`, data)
+  const onSubmit =(data)=>{axios.post(`${process.env.REACT_APP_BACKEND_API}/adminlogin`, data)
   .then(response => {
     console.log('success')
     localStorage.setItem("admintoken",response.data.admintoken)

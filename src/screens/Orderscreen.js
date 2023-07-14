@@ -19,7 +19,7 @@ const Orderscreen = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
     try {
-      const res = await axios.post('http://localhost:5000/order/add', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_API}/order/add`, {
         email: user.user.email,
         productId,
         Name: states.Name,
@@ -46,7 +46,7 @@ const Orderscreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/products/slug/${slug}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/api/products/slug/${slug}`);
         setProduct(response.data);
       } catch (error) {
         console.log('Error fetching product data:', error);

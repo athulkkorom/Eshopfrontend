@@ -16,7 +16,7 @@ const Post = () => {
   
   const navigate = useNavigate();
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit =(data)=>{axios.post(`http://localhost:5000/upload`, data)
+  const onSubmit =(data)=>{axios.post(`${process.env.REACT_APP_BACKEND_API}/upload`, data)
   .then(response => {
     console.log('success')
     

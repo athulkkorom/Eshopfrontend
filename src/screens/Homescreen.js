@@ -13,7 +13,7 @@ const Homescreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get('http://localhost:5000/api/products');
+        const result = await axios.get(`${process.env.REACT_APP_BACKEND_API}/api/products`);
         setProducts(result.data);
       } catch (error) {
         console.error(error);
@@ -27,7 +27,7 @@ const Homescreen = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     console.log(user);
     try {
-      const res = await axios.post('http://localhost:5000/cart/add', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_API}/cart/add`, {
         email: user.user.email,
         productId
       });

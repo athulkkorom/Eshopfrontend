@@ -30,7 +30,7 @@ const Signup = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     // console.log(data);
-    axios.post(`http://localhost:5000/signup`, states)
+    axios.post(`${process.env.REACT_APP_BACKEND_API}/signup`, states)
       .then(response => {
         console.log(response.data);
         localStorage.setItem("token",response.data.token)

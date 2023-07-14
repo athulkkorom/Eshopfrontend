@@ -19,7 +19,7 @@ const Productscreen = () => {
     }
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/products/slug/${slug}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/api/products/slug/${slug}`);
         setProduct(response.data);
       } catch (error) {
         console.log('Error fetching product data:', error);

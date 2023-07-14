@@ -18,7 +18,7 @@ const Products = () => {
         }  
     const fetchData = async () => {
       try {
-        const result = await axios.get('http://localhost:5000/api/products');
+        const result = await axios.get(`${process.env.REACT_APP_BACKEND_API}/api/products`);
         setProducts(result.data);
       } catch (error) {
         console.error(error);
@@ -29,7 +29,7 @@ const Products = () => {
 
   const deletePost = async (slug) => {
     try {
-      await axios.delete(`http://localhost:5000/api/delete/slug/${slug}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_API}/api/delete/slug/${slug}`);
       setProducts(products.filter((product) => product.slug !== slug));
     } catch (error) {
       console.error(error);
